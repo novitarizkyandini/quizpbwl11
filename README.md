@@ -7,7 +7,7 @@ Project ini dibangun menggunakan <a href="https://laravel.com">Laravel</a> untuk
 - Database Relasional
 
 ## Cara Instalasi
-1. Clone project `https://github.com/novitarizkyandini/quiz-pbwl11.git` 
+1. Clone project `https://github.com/novitarizkyandini/quizpbwl11.git` 
 2. Masuk ke direktori project `cd quiz-pbw` 
 3. Install semua dependensi `composer install` 
 4. Copy file .env.example `cp .env.example .env`

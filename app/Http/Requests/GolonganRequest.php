@@ -22,8 +22,8 @@ class GolonganRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'kode' => 'required|max:10',
-            'nama' => 'required|max:50'
+            'pay' => 'required|max:50',
+            'status' => 'required|max:50'
         ];
     }
 }

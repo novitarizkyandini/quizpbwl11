@@ -15,12 +15,9 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_gol');
             $table->string('no_pelanggan', 20);
+            $table->string('no_kamar', 20);
             $table->string('nama', 50);
-            $table->text('alamat');
             $table->string('no_hp', 20);
-            $table->string('ktp', 50);
-            $table->string('seri', 50);
-            $table->string('meteran', 11);
             $table->unsignedBigInteger('id_user');
             $table->enum('status', ['Aktif', 'Tidak Aktif'])->dafault('Aktif');
             $table->foreign('id_gol')->references('id')->on('golongans');

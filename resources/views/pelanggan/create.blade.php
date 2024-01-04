@@ -14,10 +14,21 @@
               <select class="form-control @error('id_gol') is-invalid @enderror" name="id_gol" id="id_gol">
                 <option value="">-- Pilih --</option>
                 @foreach($golongans as $golongan)
-                <option value="{{ $golongan->id }}">{{ $golongan->nama }}</option>
+                <option value="{{ $golongan->id }}">{{ $golongan->status}}</option>
                 @endforeach
               </select>
               @error('id_gol')
+              <div class="invalid-feedback">
+                {{ $message }}
+              </div>
+              @enderror
+            </div>
+
+            <div class="col-sm-6">
+            <div class="form-group mb-3">
+              <label for="no_kamar" class="form-label">No Kamar*</label>
+              <input type="text" class="form-control @error('no_kamar') is-invalid @enderror" name="no_kamar" id="no_kamar" placeholder="No Kamar">
+              @error('no_kamar')
               <div class="invalid-feedback">
                 {{ $message }}
               </div>
@@ -35,16 +46,6 @@
             </div>
 
             <div class="form-group mb-3">
-              <label for="alamat" class="form-label">Alamat*</label>
-              <textarea class="form-control @error('alamat') is-invalid @enderror" name="alamat" id="alamat" placeholder="Alamat"></textarea>
-              @error('alamat')
-              <div class="invalid-feedback">
-                {{ $message }}
-              </div>
-              @enderror
-            </div>
-
-            <div class="form-group mb-3">
               <label for="no_hp" class="form-label">No HP*</label>
               <input type="text" class="form-control @error('no_hp') is-invalid @enderror" name="no_hp" id="no_hp" placeholder="No HP">
               @error('no_hp')
@@ -55,37 +56,8 @@
             </div>
           </div>
 
-          <div class="col-sm-6">
-            <div class="form-group mb-3">
-              <label for="ktp" class="form-label">No KTP*</label>
-              <input type="text" class="form-control @error('ktp') is-invalid @enderror" name="ktp" id="ktp" placeholder="No KTP">
-              @error('ktp')
-              <div class="invalid-feedback">
-                {{ $message }}
-              </div>
-              @enderror
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="seri" class="form-label">Seri*</label>
-              <input type="text" class="form-control @error('seri') is-invalid @enderror" name="seri" id="seri" placeholder="Seri">
-              @error('seri')
-              <div class="invalid-feedback">
-                {{ $message }}
-              </div>
-              @enderror
-            </div>
-
-            <div class="form-group mb-3">
-              <label for="meteran" class="form-label">Meteran*</label>
-              <input type="text" class="form-control @error('meteran') is-invalid @enderror" name="meteran" id="meteran" placeholder="Meteran">
-              @error('meteran')
-              <div class="invalid-feedback">
-                {{ $message }}
-              </div>
-              @enderror
-            </div>
-
+         
+           
             <div class="form-group mb-3">
               <label for="id_user" class="form-label">User*</label>
               <select class="form-control @error('id_user') is-invalid @enderror" name="id_user" id="id_user">

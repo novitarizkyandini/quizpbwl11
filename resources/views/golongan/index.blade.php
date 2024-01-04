@@ -16,8 +16,8 @@
         <thead>
           <tr>
             <th scope="col" class="text-center">No</th>
-            <th scope="col">Kode</th>
-            <th scope="col">Nama</th>
+            <th scope="col">Pay</th>
+            <th scope="col">Status</th>
             <th scope="col" class="text-center">Edit</th>
             <th scope="col" class="text-center">Delete</th>
           </tr>
@@ -27,8 +27,8 @@
           @foreach($golongans as $golongan)
           <tr>
             <th class="text-center">{{ $no++ }}</th>
-            <td>{{ $golongan->kode }}</td>
-            <td>{{ $golongan->nama }}</td>
+            <td>{{ $golongan->pay }}</td>
+            <td>{{ $golongan->status }}</td>
             <td class="text-center">
               <a class="btn btn-primary btn-sm" href="{{ route('golongan.edit', $golongan->id) }}">Edit</a>
             </td>

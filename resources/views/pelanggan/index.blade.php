@@ -18,12 +18,9 @@
             <th scope="col" class="text-center">No</th>
             <th scope="col">No pel</th>
             <th scope="col">Golongan</th>
+            <th scope="col">No Kamar</th>
             <th scope="col">Nama</th>
-            <th scope="col">Alamat</th>
-            <th scope="col">No HP</th>
-            <th scope="col">No KTP</th>
-            <th scope="col">Seri</th>
-            <th scope="col">Meteran</th>
+            <th scope="col">No Hp</th>
             <th scope="col">User</th>
             <th scope="col">Status</th>
             <th scope="col" class="text-center">Edit</th>
@@ -36,13 +33,10 @@
           <tr>
             <th class="text-center">{{ $no++ }}</th>
             <td>{{ $pel->no_pelanggan }}</td>
-            <td>{{ $pel->golongan->nama }}</td>
+            <td>{{ $pel->golongan->status }}</td>
+            <td>{{ $pel->no_kamar}}</td>
             <td>{{ $pel->nama }}</td>
-            <td>{{ $pel->alamat }}</td>
-            <td>{{ $pel->no_hp }}</td>
-            <td>{{ $pel->ktp }}</td>
-            <td>{{ $pel->seri }}</td>
-            <td>{{ $pel->meteran }}</td>
+            <td>{{ $pel->no_hp}}</td>
             <td>{{ $pel->user->nama }}</td>
             <td>{{ $pel->status }}</td>
             <td class="text-center">

@@ -20,7 +20,7 @@ class PelangganController extends Controller
 
     public function create()
     {
-        $golongans = Golongan::select('id', 'nama')->get();
+        $golongans = Golongan::select('id', 'status')->get();
         $users = User::select('id', 'nama')->get();
 
         return view('pelanggan.create', compact('golongans', 'users'))->with('title', 'Tambah Pelanggan');
@@ -38,7 +38,7 @@ class PelangganController extends Controller
 
     public function edit(string $id)
     {
-        $golongans = Golongan::select('id', 'nama')->get();
+        $golongans = Golongan::select('id', 'status')->get();
         $users = User::select('id', 'nama')->get();
         $pelanggan = Pelanggan::findOrFail($id);
 

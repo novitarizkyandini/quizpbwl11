@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Carbon\Carbon;
@@ -12,32 +11,27 @@ class Pelanggan extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id_gol', 'no_pelanggan', 'nama', 'alamat', 'no_hp', 'ktp',
-        'seri', 'meteran', 'status', 'id_user'
+        'id_gol', 'no_pelanggan','no_kamar','nama',  'no_hp', 'id_user','status'
     ];
 
-    public function golongan(): BelongsTo
+ public function golongan(): BelongsTo
     {
         return $this->belongsTo(Golongan::class, 'id_gol', 'id');
     }
-
-    public function user(): BelongsTo
+ public function user(): BelongsTo
     {
         return $this->belongsTo(User::class, 'id_user', 'id');
     }
-
-    public static function generateNoPelanggan()
+ public static function generateNoPelanggan()
     {
         $date = Carbon::now()->format('dmy');
-
-        $lastNo = Self::select('no_pelanggan')
+     $lastNo = Self::select('no_pelanggan')
                     ->where('no_pelanggan', 'LIKE', 'NP'.$date.'%')
                     ->orderBy('no_pelanggan', 'desc')
                     ->first();
-
-        $urut = $lastNo ? substr($lastNo->no_pelanggan, 8) + 1 : 1;
+                    
+    $urut = $lastNo ? substr($lastNo->no_pelanggan, 8) + 1 : 1;
         $noPelanggan = 'NP' . $date . sprintf('%03d', $urut);
-
-        return $noPelanggan;
+     return $noPelanggan;
     }
 }

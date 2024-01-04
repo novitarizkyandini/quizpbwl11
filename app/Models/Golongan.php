@@ -12,7 +12,7 @@ class Golongan extends Model
     use HasFactory;
 
     protected $fillable = [
-        'kode', 'nama'
+        'pay', 'status'
     ];
 
     public function pelanggans(): HasMany

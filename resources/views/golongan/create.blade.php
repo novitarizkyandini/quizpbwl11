@@ -10,9 +10,9 @@
           @csrf
 
           <div class="form-group">
-            <label for="kode" class="form-label">Kode*</label>
-            <input type="text" class="form-control @error('kode') is-invalid @enderror" name="kode" id="kode" placeholder="Kode">
-            @error('kode')
+            <label for="pay" class="form-label">Pay*</label>
+            <input type="text" class="form-control @error('pay') is-invalid @enderror" name="pay" id="pay" placeholder="pay">
+            @error('pay')
             <div class="invalid-feedback">
               {{ $message }}
             </div>
@@ -20,9 +20,9 @@
           </div>
 
           <div class="form-group">
-            <label for="nama" class="form-label">Nama*</label>
-            <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama" id="nama" placeholder="Nama">
-            @error('nama')
+            <label for="status" class="form-label">Status*</label>
+            <input type="text" class="form-control @error('status') is-invalid @enderror" name="status" id="status" placeholder="status">
+            @error('status')
             <div class="invalid-feedback">
               {{ $message }}
             </div>

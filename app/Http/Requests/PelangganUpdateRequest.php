@@ -23,12 +23,9 @@ class PelangganUpdateRequest extends FormRequest
     {
         return [
             'id_gol' => 'required',
+            'no_kamar' => 'required|max:20',
             'nama' => 'required|max:50',
-            'alamat' => 'required',
-            'no_hp' => 'required|max:16',
-            'ktp' => 'required|max:50',
-            'seri' => 'required|max:50',
-            'meteran' => 'required|max:11',
+            'no_hp' => 'required|max:20',
             'id_user' => 'required',
             'status' => 'required'
         ];
